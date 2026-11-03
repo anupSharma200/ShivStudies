@@ -1,0 +1,402 @@
+/* ==========================================================================
+   ShivStudies EnrollNow Page & Confirmation Modal Styles
+   Matches UI from design specification exactly
+   ========================================================================== */
+
+.enroll-page-wrapper {
+  min-height: calc(100vh - 120px);
+  background-color: #F8FAFC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+
+
+.enroll-card-container {
+  display: grid;
+  grid-template-columns: 0.95fr 1.35fr;
+  width: 100%;
+  max-width: 1100px;
+  background-color: #FFFFFF;
+  border-radius: var(--radius-xl, 20px);
+  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.12), 0 8px 16px -6px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+  border: 1px solid #E2E8F0;
+}
+
+/* Left Brand & Course Info Column (Deep Royal Navy / Indigo) */
+.enroll-left-pane {
+  background-color: #2E2A72;
+  color: #FFFFFF;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.enroll-brand-tag {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #CBD5E1;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.enroll-course-title {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 2.35rem;
+  font-weight: 800;
+  line-height: 1.18;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.enroll-course-desc {
+  font-size: 0.95rem;
+  color: #CBD5E1;
+  line-height: 1.6;
+  margin-bottom: 36px;
+}
+
+/* Left Course Snapshot Card */
+.course-snapshot-card {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.snapshot-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.snapshot-label {
+  color: #CBD5E1;
+  font-weight: 500;
+}
+
+.snapshot-value {
+  color: #FFFFFF;
+  font-weight: 700;
+  text-align: right;
+}
+
+.snapshot-divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.14);
+  margin: 4px 0;
+}
+
+.snapshot-row.fee-row .snapshot-label {
+  font-size: 1rem;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.snapshot-row.fee-row .snapshot-value {
+  font-size: 1.25rem;
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-weight: 800;
+  color: #34D399;
+}
+
+/* Right Form Pane */
+.enroll-right-pane {
+  padding: 48px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FFFFFF;
+}
+
+.enroll-form-header {
+  margin-bottom: 28px;
+}
+
+.enroll-form-header h2 {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+}
+
+.enroll-step-subtitle {
+  font-size: 0.875rem;
+  color: #64748B;
+  font-weight: 500;
+}
+
+/* Two-column Form Grid */
+.enroll-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 20px;
+}
+
+.enroll-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.enroll-field label {
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: #1E293B;
+}
+
+.enroll-input, .enroll-select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #0F172A;
+  background-color: #FFFFFF;
+  transition: all 0.2s ease;
+  outline: none;
+  font-family: inherit;
+}
+
+.enroll-input::placeholder {
+  color: #94A3B8;
+}
+
+.enroll-input:focus, .enroll-select:focus {
+  border-color: #312E81;
+  box-shadow: 0 0 0 3px rgba(49, 46, 129, 0.12);
+}
+
+.enroll-select {
+  cursor: pointer;
+}
+
+/* Terms Checkbox */
+.terms-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.terms-checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #312E81;
+  cursor: pointer;
+}
+
+.terms-label {
+  font-size: 0.85rem;
+  color: #475569;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Enroll Now Submit Button */
+.btn-enroll-submit {
+  width: 100%;
+  padding: 15px 24px;
+  background-color: #312E81;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(49, 46, 129, 0.28);
+  margin-top: 6px;
+}
+
+.btn-enroll-submit:hover:not(:disabled) {
+  background-color: #27236D;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(49, 46, 129, 0.38);
+}
+
+.btn-enroll-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.enroll-disclaimer {
+  text-align: center;
+  font-size: 0.825rem;
+  color: #64748B;
+  margin-top: 4px;
+}
+
+/* ==========================================================================
+   Modal Dialog Styles (Image 2)
+   ========================================================================== */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+  animation: fadeIn 0.25s ease;
+}
+
+.modal-dialog-card {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 480px;
+  padding: 40px 36px 36px;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+  text-align: center;
+  position: relative;
+  animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-check-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #D1FAE5;
+  color: #10B981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.modal-title {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 12px;
+  letter-spacing: -0.3px;
+}
+
+.modal-description {
+  font-size: 0.925rem;
+  color: #475569;
+  line-height: 1.55;
+  margin-bottom: 24px;
+}
+
+/* Gray Detail Box inside Modal */
+.modal-detail-box {
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.modal-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.modal-detail-label {
+  color: #64748B;
+  font-weight: 500;
+}
+
+.modal-detail-val {
+  color: #0F172A;
+  font-weight: 700;
+  text-align: right;
+}
+
+.btn-modal-dashboard {
+  width: 100%;
+  padding: 14px 20px;
+  background-color: #312E81;
+  color: #FFFFFF;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(49, 46, 129, 0.25);
+}
+
+.btn-modal-dashboard:hover {
+  background-color: #27236D;
+  transform: translateY(-1px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .enroll-card-container {
+    grid-template-columns: 1fr;
+  }
+  .enroll-left-pane {
+    padding: 36px 28px;
+  }
+  .enroll-right-pane {
+    padding: 36px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-grid-2col {
+    grid-template-columns: 1fr;
+  }
+  .enroll-course-title {
+    font-size: 1.85rem;
+  }
+}
