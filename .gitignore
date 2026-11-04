@@ -21,5 +21,6 @@ dist-ssr
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?
 .vercel
+*.mp4
+src/assets/Video/

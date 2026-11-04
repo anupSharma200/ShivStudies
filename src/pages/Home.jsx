@@ -7,8 +7,9 @@ const EXAM_GOALS = [
     title: 'UPSC CSE',
     subtitle: 'IAS, IPS, IFS & Central Services',
     icon: '🏛️',
-    courses: '1,920+ Live Lectures',
-    rankers: 'AIR 4, 9, 23 in UPSC 2025',
+    courses: 'Prelims + Mains + Interview',
+    highlight: 'Comprehensive GS 1-4 & CSAT',
+    motto: 'Integrity, Vision & Public Service',
     color: '#08BD80',
   },
   {
@@ -16,8 +17,9 @@ const EXAM_GOALS = [
     title: 'UPPSC (PCS)',
     subtitle: 'SDM, DSP & UP State Services',
     icon: '📜',
-    courses: '1,450+ Live Classes',
-    rankers: 'Rank 1, 5, 12 in UPPSC 2025',
+    courses: 'Pre + Mains Integrated',
+    highlight: 'UP Special GK (Papers 5 & 6)',
+    motto: 'Excellence in State Administration',
     color: '#3B82F6',
   },
   {
@@ -25,8 +27,9 @@ const EXAM_GOALS = [
     title: 'BPSC (Bihar PCS)',
     subtitle: '70th & 71st Combined Exam',
     icon: '📖',
-    courses: '1,280+ Live Classes',
-    rankers: '140+ Selections in 69th CCE',
+    courses: 'Complete Syllabus Coverage',
+    highlight: 'Bihar History, Economy & Polity',
+    motto: 'Empowering Administrative Leadership',
     color: '#F59E0B',
   },
   {
@@ -34,8 +37,9 @@ const EXAM_GOALS = [
     title: 'MPPSC (State PCS)',
     subtitle: 'Deputy Collector, DSP & Excise',
     icon: '🎯',
-    courses: '980+ Video Modules',
-    rankers: '95+ Selections in 2024-25',
+    courses: 'Foundation & Answer Writing',
+    highlight: 'Madhya Pradesh Specific Modules',
+    motto: 'Devoted to Transparent Governance',
     color: '#8B5CF6',
   },
   {
@@ -43,8 +47,9 @@ const EXAM_GOALS = [
     title: 'RAS / RPSC',
     subtitle: 'Rajasthan Administrative Service',
     icon: '⚔️',
-    courses: '1,100+ Specialized Hours',
-    rankers: 'Top 10 Ranks in RAS 2024',
+    courses: 'General Studies & Regional Focus',
+    highlight: 'Rajasthan Heritage & Administration',
+    motto: 'Service with Dignity & Honour',
     color: '#EC4899',
   },
   {
@@ -52,8 +57,9 @@ const EXAM_GOALS = [
     title: 'State Govt & Police',
     subtitle: 'Sub-Inspector, Patwari & Secretariat',
     icon: '👮',
-    courses: '2,400+ Mock Tests & Notes',
-    rankers: '3,200+ State Appointments',
+    courses: 'Rigorous Test Drills & Notes',
+    highlight: 'Aptitude, Law & General Awareness',
+    motto: 'Commitment to Law & Public Duty',
     color: '#10B981',
   },
 ];
@@ -63,40 +69,40 @@ const EDUCATORS = [
     id: 1,
     name: 'V. K. Rathore (Ex-IRS)',
     subject: 'Indian Polity, Governance & Ethics (GS Paper 4)',
-    credentials: 'Ex-Civil Servant • Mentored 200+ IAS/IPS Officers',
+    credentials: 'Ex-Civil Servant • Indian Revenue Service (IRS)',
     initial: 'VR',
-    followers: '620k Aspirants',
-    watchTime: '210M+ Watch Mins',
+    domain: 'GS Paper 2 & 4',
+    approach: 'Constitutional Core & Case Studies',
     initialFollowed: true,
   },
   {
     id: 2,
     name: 'Dr. Shiva Kumar',
     subject: 'Modern Indian History & International Relations',
-    credentials: 'Ph.D. JNU • Author of UPSC Bestseller Series',
+    credentials: 'Ph.D. JNU • Modern Indian History Specialist',
     initial: 'SK',
-    followers: '480k Aspirants',
-    watchTime: '165M+ Watch Mins',
+    domain: 'GS Paper 1 & 2',
+    approach: 'Timeline & Historiographical Analysis',
     initialFollowed: false,
   },
   {
     id: 3,
     name: 'Meenakshi Sharma',
     subject: 'Indian Economy & Annual Economic Survey',
-    credentials: 'Delhi School of Economics • 12+ Yrs UPSC Faculty',
+    credentials: 'Alumna Delhi School of Economics • Macroeconomics Specialist',
     initial: 'MS',
-    followers: '390k Aspirants',
-    watchTime: '115M+ Watch Mins',
+    domain: 'GS Paper 3',
+    approach: 'Analytical & Concept-Driven Economics',
     initialFollowed: false,
   },
   {
     id: 4,
     name: 'Prof. Rajeshwar Shastri',
     subject: 'Geography, Environment & State PCS Special GK',
-    credentials: 'Former State PSC Board Advisor • 18+ Yrs Experience',
+    credentials: 'Former University Faculty • 18+ Yrs Academic Guidance',
     initial: 'RS',
-    followers: '510k Aspirants',
-    watchTime: '140M+ Watch Mins',
+    domain: 'GS Paper 1 & State GK',
+    approach: 'Mapping, Cartography & Ecology',
     initialFollowed: false,
   },
 ];
@@ -120,7 +126,7 @@ const BATCHES = [
     category: 'State PSC',
     tag: '📜 Pre + Mains Integrated',
     title: 'Vijayi Bhavah: UPPSC & BPSC Combined PCS Master Batch',
-    desc: 'Exhaustive General Studies syllabus, UP & Bihar Special GK modules, and 60+ Full-Length Mock Tests.',
+    desc: 'Exhaustive General Studies syllabus, UP & Bihar Special GK modules, and personalized Answer Writing Drills.',
     educators: 'Prof. Rajeshwar Shastri & Team',
     price: '₹ 12,499',
     originalPrice: '₹ 24,999',
@@ -189,24 +195,24 @@ export default function Home({ user, onNavigate, selectedGoal, onSelectGoal, onE
 
                   <div className="dashboard-metrics-grid">
                     <div className="dash-metric-card">
-                      <span className="dash-icon">📖</span>
+                      <span className="dash-icon">🎯</span>
                       <div>
-                        <div className="dash-num">2 / 2</div>
-                        <div className="dash-desc">Mains Answers Submitted</div>
+                        <div className="dash-num">Target {selectedGoal.toUpperCase().replace('-', ' ')}</div>
+                        <div className="dash-desc">Your Selected Goal</div>
                       </div>
                     </div>
                     <div className="dash-metric-card">
-                      <span className="dash-icon">🔥</span>
+                      <span className="dash-icon">✍️</span>
                       <div>
-                        <div className="dash-num">14 Days</div>
-                        <div className="dash-desc">Active Study Streak</div>
+                        <div className="dash-num">Daily</div>
+                        <div className="dash-desc">Mains Answer Writing</div>
                       </div>
                     </div>
                     <div className="dash-metric-card">
-                      <span className="dash-icon">📊</span>
+                      <span className="dash-icon">🏛️</span>
                       <div>
-                        <div className="dash-num">118 / 200</div>
-                        <div className="dash-desc">Last GS Mock Score</div>
+                        <div className="dash-num">1-on-1</div>
+                        <div className="dash-desc">Mentor Doubt Resolution</div>
                       </div>
                     </div>
                   </div>
@@ -219,13 +225,13 @@ export default function Home({ user, onNavigate, selectedGoal, onSelectGoal, onE
                   </div>
 
                   <h1 className="hero-title">
-                    Crack UPSC & State PCS with India's{' '}
-                    <span className="highlight">Top Civil Services Mentors</span>
+                    Begin Your Civil Services Journey with{' '}
+                    <span className="highlight">True Mentorship & Purpose</span>
                   </h1>
 
                   <p className="hero-subtitle">
-                    Integrated Prelims cum Mains coaching, daily Mains answer writing evaluation,
-                    The Hindu editorial analysis, and 1-on-1 bureaucrat mentorship.
+                    Honest, rigorous preparation built by experienced civil servants and academicians.
+                    Master Prelims and Mains through daily answer writing, deep conceptual clarity, and personal guidance.
                   </p>
                 </>
               )}
@@ -258,8 +264,8 @@ export default function Home({ user, onNavigate, selectedGoal, onSelectGoal, onE
                     if (onEnroll) {
                       onEnroll({
                         title: 'Samarthya: UPSC CSE 2026/27 Prelims + Mains Foundation',
-                        duration: '12 months',
-                        mode: 'Online / Classroom',
+                        duration: '18 months',
+                        mode: 'Online Live + Mentorship',
                         nextBatch: '15 Nov 2026',
                         price: '₹ 24,999',
                       });
@@ -283,23 +289,23 @@ export default function Home({ user, onNavigate, selectedGoal, onSelectGoal, onE
                 </button>
               </div>
 
-              {/* Trust Metrics Bar */}
+              {/* Core Values & Mentorship Pillars (Honest & Inspiring) */}
               <div className="hero-trust-bar">
                 <div className="trust-item">
-                  <span className="trust-number">350k+</span>
-                  <span className="trust-label">Civil Services Aspirants</span>
+                  <span className="trust-number">Ex-Officers</span>
+                  <span className="trust-label">Civil Services Mentors</span>
                 </div>
                 <div className="trust-item">
-                  <span className="trust-number">450+</span>
-                  <span className="trust-label">Officers & Mentors</span>
+                  <span className="trust-number">Daily</span>
+                  <span className="trust-label">Mains Answer Evaluation</span>
                 </div>
                 <div className="trust-item">
-                  <span className="trust-number">4.9 ★</span>
-                  <span className="trust-label">Aspirant Rating</span>
+                  <span className="trust-number">1-on-1</span>
+                  <span className="trust-label">Personal Doubt Solving</span>
                 </div>
                 <div className="trust-item">
-                  <span className="trust-number">420+</span>
-                  <span className="trust-label">Selections in 2024-25</span>
+                  <span className="trust-number">100%</span>
+                  <span className="trust-label">Transparent Guidance</span>
                 </div>
               </div>
             </div>
@@ -311,7 +317,7 @@ export default function Home({ user, onNavigate, selectedGoal, onSelectGoal, onE
                   <span className="pulse-dot"></span>
                   <span>LIVE CLASS IN PROGRESS</span>
                 </div>
-                <span className="live-attendees">👥 8,420 aspirants live</span>
+                <span className="live-attendees">🔴 Live Mentorship Classroom</span>
               </div>
 
               <div className="live-video-preview">
@@ -319,7 +325,7 @@ export default function Home({ user, onNavigate, selectedGoal, onSelectGoal, onE
                   <div className="educator-avatar-live">VR</div>
                   <div className="educator-info-live">
                     <h4>V. K. Rathore (Ex-IRS)</h4>
-                    <p>Polity & Ethics Guru • Mentored 200+ Officers</p>
+                    <p>Polity & Ethics Mentor • Ex-Civil Servant</p>
                   </div>
                 </div>
 
@@ -349,7 +355,7 @@ export default function Home({ user, onNavigate, selectedGoal, onSelectGoal, onE
                       }}
                     >
                       <span>A) Article 280 (By President every 5th year)</span>
-                      <span>{pollVoted ? '✓ Correct (92%)' : 'Vote'}</span>
+                      <span>{pollVoted ? '✓ Correct Choice' : 'Vote'}</span>
                     </button>
                     <button
                       type="button"
@@ -367,7 +373,7 @@ export default function Home({ user, onNavigate, selectedGoal, onSelectGoal, onE
                       }}
                     >
                       <span>B) Article 324 (Election Commission)</span>
-                      <span>{pollVoted ? '8%' : 'Vote'}</span>
+                      <span>{pollVoted ? 'Incorrect' : 'Vote'}</span>
                     </button>
                   </div>
                   {pollVoted && (
@@ -429,7 +435,10 @@ export default function Home({ user, onNavigate, selectedGoal, onSelectGoal, onE
                     </div>
                   </div>
                   <div style={{ fontSize: '0.825rem', color: 'var(--text-secondary)', marginBottom: '14px' }}>
-                    🏆 <strong>{g.rankers}</strong>
+                    🎯 <strong>{g.highlight}</strong>
+                    <div style={{ fontSize: '0.75rem', color: 'var(--primary)', fontWeight: 600, marginTop: '3px', fontStyle: 'italic' }}>
+                      "{g.motto}"
+                    </div>
                   </div>
                 </div>
 
@@ -450,9 +459,9 @@ export default function Home({ user, onNavigate, selectedGoal, onSelectGoal, onE
         <div className="container">
           <div className="section-header">
             <span className="section-tag">Preparation Edge</span>
-            <h2 className="section-title">Why Top Rankers Choose ShivStudies</h2>
+            <h2 className="section-title">Our Foundation: Discipline, Rigor & Honest Mentorship</h2>
             <p className="section-subtitle">
-              Comprehensive UPSC & State PSC mentorship tailored to clear Prelims, Mains, and the Personality Test.
+              We focus on what truly matters to crack UPSC and State PCS — clear concepts, structured answer writing, and unwavering commitment.
             </p>
           </div>
 
@@ -461,7 +470,7 @@ export default function Home({ user, onNavigate, selectedGoal, onSelectGoal, onE
               <div className="feature-icon-wrapper">✍️</div>
               <h3>Daily Mains Answer Writing</h3>
               <p>
-                Write daily GS and Optional answers evaluated within 24 hours with model structures, diagram tips, and personal feedback.
+                Write daily GS and Optional answers evaluated by subject experts with constructive feedback, model answers, and structure tips.
               </p>
             </div>
 
@@ -469,23 +478,23 @@ export default function Home({ user, onNavigate, selectedGoal, onSelectGoal, onE
               <div className="feature-icon-wrapper">📰</div>
               <h3>Current Affairs & Editorial Gist</h3>
               <p>
-                Daily decoded analysis from The Hindu, Indian Express, and monthly Yojana & Kurukshetra magazines for GS Paper 2 & 3.
+                Daily decoded analysis from The Hindu, Indian Express, and monthly Yojana & Kurukshetra summaries for GS Papers 2 & 3.
               </p>
             </div>
 
             <div className="feature-card">
               <div className="feature-icon-wrapper">🎯</div>
-              <h3>Prelims Test Series & Rankers AI</h3>
+              <h3>Prelims Simulation with Negative Marking</h3>
               <p>
-                Simulate real exam pressure with negative marking, detailed question explanations, and All-India rank predictions.
+                Practice topic-wise and full-length GS papers designed strictly on UPSC patterns to build accuracy and real exam temperament.
               </p>
             </div>
 
             <div className="feature-card">
               <div className="feature-icon-wrapper">👨‍💼</div>
-              <h3>1-on-1 Bureaucrat Mentorship</h3>
+              <h3>Direct Mentor Accessibility</h3>
               <p>
-                Personalized strategy calls with serving and retired civil servants to refine study plans, optional choices, and DAF interview prep.
+                Reach out directly to experienced mentors and former civil servants for strategy guidance, syllabus prioritization, and study plans.
               </p>
             </div>
           </div>
@@ -497,9 +506,9 @@ export default function Home({ user, onNavigate, selectedGoal, onSelectGoal, onE
         <div className="container">
           <div className="section-header">
             <span className="section-tag">Mentors & Guides</span>
-            <h2 className="section-title">Learn from India's Best Teachers</h2>
+            <h2 className="section-title">Learn from Experienced Civil Services Mentors</h2>
             <p className="section-subtitle">
-              Over 5,000+ handpicked educators, Ex-Civil Servants, Subject Experts, and Top Rankers guiding you at every step.
+              A dedicated core faculty of former civil servants, university academicians, and subject experts committed to honest guidance.
             </p>
           </div>
 
@@ -513,12 +522,12 @@ export default function Home({ user, onNavigate, selectedGoal, onSelectGoal, onE
 
                 <div className="educator-metrics">
                   <div className="metric-col">
-                    <span className="number">{edu.followers}</span>
-                    <span className="label">Followers</span>
+                    <span className="number">{edu.domain}</span>
+                    <span className="label">Focus Area</span>
                   </div>
                   <div className="metric-col">
-                    <span className="number">{edu.watchTime}</span>
-                    <span className="label">Watch Time</span>
+                    <span className="number" style={{ fontSize: '0.85rem' }}>{edu.approach}</span>
+                    <span className="label">Pedagogy</span>
                   </div>
                 </div>
 
@@ -531,7 +540,7 @@ export default function Home({ user, onNavigate, selectedGoal, onSelectGoal, onE
                   }}
                   onClick={() => toggleFollow(edu.id)}
                 >
-                  {followedEducators[edu.id] ? '✓ Following' : '+ Follow Educator'}
+                  {followedEducators[edu.id] ? '✓ Mentor Selected' : '+ Select for Guidance'}
                 </button>
               </div>
             ))}
@@ -544,9 +553,9 @@ export default function Home({ user, onNavigate, selectedGoal, onSelectGoal, onE
         <div className="container">
           <div className="section-header">
             <span className="section-tag">New Batches</span>
-            <h2 className="section-title">Structured Batches Starting This Week</h2>
+            <h2 className="section-title">Structured Batches for Upcoming Exam Cycles</h2>
             <p className="section-subtitle">
-              Join live batches covering full syllabus from basic concepts to advanced problem solving.
+              Comprehensive live cohorts designed for complete syllabus coverage, conceptual clarity, and daily mentor accountability.
             </p>
           </div>
 

@@ -4,7 +4,7 @@ import '../css/login.css';
 export default function Login({ onLoginSuccess, onNavigate, defaultGoal = 'upsc-cse' }) {
   const [authMode, setAuthMode] = useState('login'); // 'login' | 'signup'
   const [email, setEmail] = useState('aspirant@shivstudies.com');
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState('123456');
   const [fullName, setFullName] = useState('');
   const [goal, setGoal] = useState(defaultGoal);
   const [showPassword, setShowPassword] = useState(false);
@@ -119,10 +119,10 @@ export default function Login({ onLoginSuccess, onNavigate, defaultGoal = 'upsc-
             </div>
 
             <h2>
-              Crack UPSC & State PCS with <span>India's Best</span> Mentors
+              Begin Your Journey to <span>Serve the Nation</span>
             </h2>
             <p>
-              Join over 350,000+ registered aspirants preparing for UPSC CSE, UPPSC, BPSC, MPPSC and State Government examinations.
+              Founded by experienced educators and civil services mentors to give every dedicated aspirant honest, disciplined, and rigorous preparation for UPSC CSE and State PCS.
             </p>
 
             {/* Feature List */}
@@ -141,21 +141,18 @@ export default function Login({ onLoginSuccess, onNavigate, defaultGoal = 'upsc-
               </div>
               <div className="auth-feature-item">
                 <div className="auth-feature-icon">✓</div>
-                <span>1-on-1 personalized academic mentorship with serving & retired officers</span>
+                <span>1-on-1 personalized academic mentorship with experienced mentors</span>
               </div>
             </div>
           </div>
 
-          {/* Social Proof */}
+          {/* Inspiring Mission Highlight */}
           <div className="auth-social-proof">
-            <div className="student-avatar-stack">
-              <div className="avatar-stack-item" style={{ backgroundColor: '#08BD80' }}>A</div>
-              <div className="avatar-stack-item" style={{ backgroundColor: '#3B82F6' }}>R</div>
-              <div className="avatar-stack-item" style={{ backgroundColor: '#F59E0B' }}>S</div>
-              <div className="avatar-stack-item" style={{ backgroundColor: '#8B5CF6' }}>+</div>
+            <div className="student-avatar-stack" style={{ fontSize: '1.25rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              🇮🇳
             </div>
             <p>
-              <strong>250,000+ students</strong> are practicing questions live right now!
+              <strong>"Satyameva Jayate"</strong> — Dedicated to honest mentorship, disciplined rigor, and ethical excellence from Day 1.
             </p>
           </div>
         </div>

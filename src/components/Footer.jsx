@@ -20,8 +20,8 @@ export default function Footer({ onNavigate }) {
         {/* Top Newsletter / Exam Alert Banner */}
         <div className="footer-newsletter">
           <div className="newsletter-info">
-            <h3>Get Exam Notifications & Free Daily Quizzes</h3>
-            <p>Join 1,000,000+ aspirants receiving daily current affairs, PYQs & exam schedules.</p>
+            <h3>Get Exam Notifications & Free Daily Current Affairs</h3>
+            <p>Receive honest daily current affairs, PYQ analysis, and notification alerts straight to your inbox.</p>
           </div>
           <form className="newsletter-form" onSubmit={handleSubscribe}>
             <input
@@ -53,14 +53,12 @@ export default function Footer({ onNavigate }) {
                   Shiv<span>Studies</span>
                 </div>
                 <span className="brand-tagline" style={{ color: '#64748B' }}>
-                  India's Learning Platform
+                  Civil Services & State PCS
                 </span>
               </div>
             </div>
             <p>
-              ShivStudies is India's premier online learning platform empowering millions of civil services and
-              state exam aspirants to crack UPSC CSE, State PCS, and administrative exams with daily live classes,
-              top educators, and personalized test series.
+              ShivStudies is dedicated to providing high-quality, transparent, and structured preparation for UPSC Civil Services and State PCS examinations through experienced subject mentors and disciplined academic guidance.
             </p>
             <div className="footer-socials">
               <a href="#youtube" className="social-pill" aria-label="YouTube">▶</a>
