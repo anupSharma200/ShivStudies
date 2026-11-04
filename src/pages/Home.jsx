@@ -61,7 +61,7 @@ const EXAM_GOALS = [
 const EDUCATORS = [
   {
     id: 1,
-    name: 'Dr. Shiv Kumar',
+    name: 'Shiva Kumar',
     subject: 'Physics • IIT JEE Advanced',
     credentials: 'B.Tech IIT Delhi • 14+ Years Experience',
     initial: 'SK',
@@ -109,7 +109,7 @@ const BATCHES = [
     tag: '🔥 Target 2026/27',
     title: 'Emerge Excellence Batch: Complete Physics & Math',
     desc: 'Comprehensive coverage of Class 11 & 12 syllabus with 200+ live classes, weekly tests, and PYQ drills.',
-    educators: 'Dr. Shiv Kumar & M. Sundaram',
+    educators: 'Shiva Kumar & M. Sundaram',
     price: '₹ 14,999',
     originalPrice: '₹ 29,999',
     discount: '50% OFF',
@@ -184,7 +184,7 @@ export default function Home({ user, onNavigate, selectedGoal, onSelectGoal, onE
                   </h1>
 
                   <p className="hero-subtitle">
-                    Your learning momentum is strong. Your next live class with <strong>Dr. Shiv Kumar</strong> starts in <strong>45 minutes</strong>.
+                    Your learning momentum is strong. Your next live class with <strong>Shiva Kumar</strong> starts in <strong>45 minutes</strong>.
                   </p>
 
                   <div className="dashboard-metrics-grid">
@@ -313,7 +313,7 @@ export default function Home({ user, onNavigate, selectedGoal, onSelectGoal, onE
                 <div className="educator-live-bar">
                   <div className="educator-avatar-live">SK</div>
                   <div className="educator-info-live">
-                    <h4>Dr. Shiv Kumar</h4>
+                    <h4>Shiva Kumar</h4>
                     <p>Physics Guru • Ex-IIT Delhi (AIR 42)</p>
                   </div>
                 </div>
@@ -379,7 +379,7 @@ export default function Home({ user, onNavigate, selectedGoal, onSelectGoal, onE
                   className="btn-join-live"
                   onClick={() => {
                     if (user) {
-                      alert('Entering live session room with Dr. Shiv Kumar...');
+                      alert('Entering live session room with Shiva Kumar...');
                     } else if (onNavigate) {
                       onNavigate('login');
                     }

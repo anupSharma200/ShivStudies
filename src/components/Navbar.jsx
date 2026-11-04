@@ -265,6 +265,155 @@ export default function Navbar({
           </div>
         </div>
       </header>
+
+      {/* Mobile Drawer Navigation (Interactive for Phones & Tablets) */}
+      {mobileMenuOpen && (
+        <div className="mobile-menu-backdrop" onClick={() => setMobileMenuOpen(false)}>
+          <div className="mobile-menu-drawer" onClick={(e) => e.stopPropagation()}>
+            <div className="mobile-drawer-header">
+              <div
+                className="brand-logo"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  if (onNavigate) onNavigate('home');
+                }}
+              >
+                <div className="brand-icon">S</div>
+                <div className="brand-text">
+                  <div className="brand-name">
+                    Shiv<span>Studies</span>
+                  </div>
+                </div>
+              </div>
+              <button
+                type="button"
+                className="mobile-close-btn"
+                onClick={() => setMobileMenuOpen(false)}
+                aria-label="Close menu"
+              >
+                ✕
+              </button>
+            </div>
+
+            {/* Mobile User Profile or Auth */}
+            {user ? (
+              <div className="mobile-user-card">
+                <div className="user-avatar" style={{ width: '42px', height: '42px', fontSize: '1.05rem' }}>
+                  {user.name ? user.name.charAt(0).toUpperCase() : 'U'}
+                </div>
+                <div>
+                  <div style={{ fontWeight: 800, color: 'var(--text-primary)', fontSize: '0.925rem' }}>
+                    {user.name}
+                  </div>
+                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{user.email}</div>
+                  <div style={{ fontSize: '0.72rem', color: 'var(--primary)', fontWeight: 700, marginTop: '2px' }}>
+                    🎯 {currentGoalObj.label}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="mobile-auth-btns">
+                <button
+                  type="button"
+                  className="btn-login"
+                  style={{ width: '100%', textAlign: 'center' }}
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    if (onNavigate) onNavigate('login');
+                  }}
+                >
+                  Log In
+                </button>
+                <button
+                  type="button"
+                  className="btn-register"
+                  style={{ width: '100%', textAlign: 'center' }}
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    if (onNavigate) onNavigate('login');
+                  }}
+                >
+                  Join For Free
+                </button>
+              </div>
+            )}
+
+            {/* Target Goal Picker */}
+            <div className="mobile-section-heading">Target Goal</div>
+            <div className="mobile-goal-grid">
+              {EXAM_GOALS.map((g) => (
+                <button
+                  key={g.id}
+                  type="button"
+                  className={`mobile-goal-chip ${selectedGoal === g.id ? 'active' : ''}`}
+                  onClick={() => {
+                    handleGoalSelect(g);
+                    setMobileMenuOpen(false);
+                  }}
+                >
+                  <span>{g.icon}</span>
+                  <span>{g.label}</span>
+                </button>
+              ))}
+            </div>
+
+            {/* Navigation Links */}
+            <div className="mobile-section-heading">Menu</div>
+            <div className="mobile-nav-links">
+              <button
+                type="button"
+                className="mobile-nav-item"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  if (onNavigate) onNavigate('home');
+                }}
+              >
+                <span>🏠</span> Explore Platform
+              </button>
+              <button
+                type="button"
+                className="mobile-nav-item"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  if (onNavigate) onNavigate('home');
+                  setTimeout(() => {
+                    const el = document.getElementById('batches-section');
+                    if (el) el.scrollIntoView({ behavior: 'smooth' });
+                  }, 100);
+                }}
+              >
+                <span>📚</span> Live Batches
+              </button>
+              <button
+                type="button"
+                className="mobile-nav-item"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  if (onNavigate) onNavigate('home');
+                  setTimeout(() => {
+                    const el = document.getElementById('educators-section');
+                    if (el) el.scrollIntoView({ behavior: 'smooth' });
+                  }, 100);
+                }}
+              >
+                <span>👨‍🏫</span> Top Educators
+              </button>
+              {user && (
+                <button
+                  type="button"
+                  className="mobile-nav-item logout"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    if (onLogout) onLogout();
+                  }}
+                >
+                  <span>🚪</span> Sign Out
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }

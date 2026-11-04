@@ -869,15 +869,83 @@
 }
 
 @media (max-width: 640px) {
-  .hero-title {
-    font-size: 2.25rem;
+  .hero-section {
+    padding: 36px 0 44px;
   }
-  .section-title {
-    font-size: 1.75rem;
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+  }
+  .hero-subtitle {
+    font-size: 0.925rem;
+  }
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  .btn-primary-large, .btn-secondary-large {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 12px 20px;
   }
   .hero-trust-bar {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 16px;
-    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+  .section-title {
+    font-size: 1.65rem;
+  }
+  .section-subtitle {
+    font-size: 0.875rem;
+  }
+  .goals-section, .features-section, .educators-section, .batches-section {
+    padding: 48px 0;
+  }
+  .goals-grid, .features-grid, .educators-grid, .batches-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .app-banner-card {
+    padding: 28px 18px;
+    border-radius: 16px;
+  }
+  .app-banner-info h2 {
+    font-size: 1.6rem;
+  }
+  .app-store-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+  .app-btn {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  .dashboard-metrics-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-title {
+    font-size: 1.75rem;
+  }
+  .hero-pill {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+  }
+  .goal-chip {
+    padding: 6px 12px;
+    font-size: 0.785rem;
+  }
+  .trust-number {
+    font-size: 1.25rem;
   }
 }

@@ -419,8 +419,178 @@
   }
   .mobile-toggle {
     display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
   .navbar {
-    height: 64px;
+    height: 62px;
   }
+  .brand-tagline {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .top-announcement {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+  .top-announcement span.badge {
+    display: none;
+  }
+  .btn-login {
+    display: none;
+  }
+  .btn-register {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+  }
+  .user-role {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Mobile Drawer Styles
+   ========================================================================== */
+
+.mobile-menu-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: flex;
+  justify-content: flex-end;
+  animation: fadeIn 0.2s ease;
+}
+
+.mobile-menu-drawer {
+  background-color: #FFFFFF;
+  width: 84%;
+  max-width: 320px;
+  height: 100%;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: -8px 0 25px rgba(0, 0, 0, 0.15);
+  animation: slideDrawer 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+@keyframes slideDrawer {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.mobile-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.mobile-close-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: var(--bg-subtle);
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-user-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background-color: var(--bg-subtle);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+}
+
+.mobile-auth-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mobile-section-heading {
+  font-size: 0.725rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.mobile-goal-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mobile-goal-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.775rem;
+  font-weight: 600;
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-light);
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.mobile-goal-chip.active {
+  background-color: var(--primary-light);
+  border-color: var(--primary);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mobile-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  width: 100%;
+}
+
+.mobile-nav-item:hover {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.mobile-nav-item.logout {
+  color: var(--accent-red);
+}
+
+.mobile-nav-item.logout:hover {
+  background-color: var(--accent-red-light);
 }

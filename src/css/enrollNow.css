@@ -1,80 +1,110 @@
 /* ==========================================================================
    ShivStudies EnrollNow Page & Confirmation Modal Styles
-   Matches UI from design specification exactly
+   Styled in signature Emerald & Dark Slate theme matching the Login screen
+   Fully responsive across Desktop, Tablet, and Mobile devices
    ========================================================================== */
 
 .enroll-page-wrapper {
   min-height: calc(100vh - 120px);
-  background-color: #F8FAFC;
+  background: radial-gradient(circle at 10% 10%, rgba(8, 189, 128, 0.05) 0%, transparent 40%),
+              radial-gradient(circle at 90% 90%, rgba(37, 99, 235, 0.05) 0%, transparent 40%),
+              #F8FAFC;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 40px 20px;
 }
 
-
-
 .enroll-card-container {
   display: grid;
   grid-template-columns: 0.95fr 1.35fr;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1060px;
   background-color: #FFFFFF;
-  border-radius: var(--radius-xl, 20px);
-  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.12), 0 8px 16px -6px rgba(15, 23, 42, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.12), 0 8px 16px -6px rgba(15, 23, 42, 0.06);
   overflow: hidden;
   border: 1px solid #E2E8F0;
 }
 
-/* Left Brand & Course Info Column (Deep Royal Navy / Indigo) */
+/* Left Brand & Course Info Column - Matches Login Screen Emerald Theme */
 .enroll-left-pane {
-  background-color: #2E2A72;
+  background: linear-gradient(150deg, #065F46 0%, #0F172A 100%);
   color: #FFFFFF;
   padding: 48px 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  overflow: hidden;
+}
+
+.enroll-left-pane::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, rgba(8, 189, 128, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
 }
 
 .enroll-brand-tag {
   font-size: 0.85rem;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
-  color: #CBD5E1;
+  color: #A7F3D0;
   margin-bottom: 24px;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
+.enroll-brand-tag span.badge {
+  background: rgba(8, 189, 128, 0.25);
+  border: 1px solid rgba(8, 189, 128, 0.5);
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  color: #34D399;
+}
+
 .enroll-course-title {
   font-family: var(--font-heading, 'Outfit', sans-serif);
-  font-size: 2.35rem;
+  font-size: 2.25rem;
   font-weight: 800;
   line-height: 1.18;
   color: #FFFFFF;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   letter-spacing: -0.5px;
+  position: relative;
+  z-index: 2;
 }
 
 .enroll-course-desc {
   font-size: 0.95rem;
-  color: #CBD5E1;
+  color: #A7F3D0;
   line-height: 1.6;
-  margin-bottom: 36px;
+  margin-bottom: 32px;
+  position: relative;
+  z-index: 2;
 }
 
 /* Left Course Snapshot Card */
 .course-snapshot-card {
   background-color: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(8, 189, 128, 0.35);
   border-radius: 14px;
   padding: 22px 24px;
   display: flex;
   flex-direction: column;
   gap: 14px;
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(8px);
 }
 
 .snapshot-row {
@@ -108,7 +138,7 @@
 }
 
 .snapshot-row.fee-row .snapshot-value {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-family: var(--font-heading, 'Outfit', sans-serif);
   font-weight: 800;
   color: #34D399;
@@ -116,7 +146,7 @@
 
 /* Right Form Pane */
 .enroll-right-pane {
-  padding: 48px 44px;
+  padding: 44px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -124,12 +154,31 @@
 }
 
 .enroll-form-header {
-  margin-bottom: 28px;
+  margin-bottom: 24px;
+}
+
+.enroll-back-btn {
+  font-size: 0.825rem;
+  color: #64748B;
+  margin-bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: color 0.15s ease;
+  padding: 0;
+}
+
+.enroll-back-btn:hover {
+  color: #08BD80;
 }
 
 .enroll-form-header h2 {
   font-family: var(--font-heading, 'Outfit', sans-serif);
-  font-size: 2rem;
+  font-size: 1.95rem;
   font-weight: 800;
   color: #0F172A;
   margin-bottom: 6px;
@@ -146,13 +195,13 @@
 .enroll-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
 
 .form-grid-2col {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px 20px;
+  gap: 16px 18px;
 }
 
 .enroll-field {
@@ -172,12 +221,13 @@
   padding: 12px 14px;
   border: 1.5px solid #E2E8F0;
   border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: 16px; /* 16px prevents iOS automatic zoom on focus */
   color: #0F172A;
   background-color: #FFFFFF;
   transition: all 0.2s ease;
   outline: none;
   font-family: inherit;
+  box-sizing: border-box;
 }
 
 .enroll-input::placeholder {
@@ -185,8 +235,8 @@
 }
 
 .enroll-input:focus, .enroll-select:focus {
-  border-color: #312E81;
-  box-shadow: 0 0 0 3px rgba(49, 46, 129, 0.12);
+  border-color: #08BD80;
+  box-shadow: 0 0 0 3px rgba(8, 189, 128, 0.14);
 }
 
 .enroll-select {
@@ -204,7 +254,7 @@
 .terms-checkbox {
   width: 18px;
   height: 18px;
-  accent-color: #312E81;
+  accent-color: #08BD80;
   cursor: pointer;
 }
 
@@ -215,11 +265,11 @@
   user-select: none;
 }
 
-/* Enroll Now Submit Button */
+/* Enroll Now Submit Button - Matches Login Screen Theme */
 .btn-enroll-submit {
   width: 100%;
-  padding: 15px 24px;
-  background-color: #312E81;
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #08BD80 0%, #059C68 100%);
   color: #FFFFFF;
   font-family: inherit;
   font-size: 1rem;
@@ -232,14 +282,15 @@
   justify-content: center;
   gap: 10px;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 12px rgba(49, 46, 129, 0.28);
-  margin-top: 6px;
+  box-shadow: 0 4px 14px rgba(8, 189, 128, 0.32);
+  margin-top: 4px;
+  min-height: 48px;
 }
 
 .btn-enroll-submit:hover:not(:disabled) {
-  background-color: #27236D;
+  background: linear-gradient(135deg, #059C68 0%, #048256 100%);
   transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(49, 46, 129, 0.38);
+  box-shadow: 0 6px 18px rgba(8, 189, 128, 0.42);
 }
 
 .btn-enroll-submit:disabled {
@@ -249,25 +300,25 @@
 
 .enroll-disclaimer {
   text-align: center;
-  font-size: 0.825rem;
+  font-size: 0.8rem;
   color: #64748B;
   margin-top: 4px;
 }
 
 /* ==========================================================================
-   Modal Dialog Styles (Image 2)
+   Modal Dialog Styles - Responsive & Clean
    ========================================================================== */
 
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background-color: rgba(15, 23, 42, 0.55);
+  background-color: rgba(15, 23, 42, 0.6);
   backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  padding: 20px;
+  padding: 16px;
   animation: fadeIn 0.25s ease;
 }
 
@@ -276,11 +327,12 @@
   border-radius: 20px;
   width: 100%;
   max-width: 480px;
-  padding: 40px 36px 36px;
+  padding: 38px 32px 32px;
   box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
   text-align: center;
   position: relative;
   animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
 }
 
 .modal-check-circle {
@@ -288,29 +340,29 @@
   height: 64px;
   border-radius: 50%;
   background-color: #D1FAE5;
-  color: #10B981;
+  color: #08BD80;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 24px;
+  margin: 0 auto 20px;
   font-size: 1.8rem;
   font-weight: 800;
 }
 
 .modal-title {
   font-family: var(--font-heading, 'Outfit', sans-serif);
-  font-size: 1.65rem;
+  font-size: 1.6rem;
   font-weight: 800;
   color: #0F172A;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   letter-spacing: -0.3px;
 }
 
 .modal-description {
-  font-size: 0.925rem;
+  font-size: 0.9rem;
   color: #475569;
   line-height: 1.55;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 }
 
 /* Gray Detail Box inside Modal */
@@ -318,11 +370,11 @@
   background-color: #F8FAFC;
   border: 1px solid #E2E8F0;
   border-radius: 12px;
-  padding: 16px 20px;
+  padding: 14px 18px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   text-align: left;
 }
 
@@ -347,7 +399,7 @@
 .btn-modal-dashboard {
   width: 100%;
   padding: 14px 20px;
-  background-color: #312E81;
+  background: linear-gradient(135deg, #08BD80 0%, #059C68 100%);
   color: #FFFFFF;
   border-radius: 8px;
   font-size: 0.95rem;
@@ -355,11 +407,12 @@
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 12px rgba(49, 46, 129, 0.25);
+  box-shadow: 0 4px 14px rgba(8, 189, 128, 0.3);
+  min-height: 48px;
 }
 
 .btn-modal-dashboard:hover {
-  background-color: #27236D;
+  background: linear-gradient(135deg, #059C68 0%, #048256 100%);
   transform: translateY(-1px);
 }
 
@@ -379,24 +432,93 @@
   }
 }
 
-/* Responsive */
-@media (max-width: 900px) {
+/* ==========================================================================
+   Comprehensive Mobile Responsiveness
+   ========================================================================== */
+
+@media (max-width: 860px) {
+  .enroll-page-wrapper {
+    padding: 24px 16px;
+  }
+
   .enroll-card-container {
     grid-template-columns: 1fr;
+    max-width: 600px;
+    border-radius: 16px;
   }
+
   .enroll-left-pane {
-    padding: 36px 28px;
+    padding: 32px 26px;
   }
+
+  .enroll-course-title {
+    font-size: 1.95rem;
+  }
+
   .enroll-right-pane {
-    padding: 36px 24px;
+    padding: 32px 24px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 580px) {
+  .enroll-page-wrapper {
+    padding: 12px 10px;
+  }
+
+  .enroll-card-container {
+    border-radius: 14px;
+  }
+
+  .enroll-left-pane {
+    padding: 24px 18px;
+  }
+
+  .enroll-course-title {
+    font-size: 1.55rem;
+    margin-bottom: 12px;
+  }
+
+  .enroll-course-desc {
+    font-size: 0.875rem;
+    margin-bottom: 20px;
+  }
+
+  .course-snapshot-card {
+    padding: 16px 18px;
+    gap: 10px;
+  }
+
+  .snapshot-row {
+    font-size: 0.85rem;
+  }
+
+  .snapshot-row.fee-row .snapshot-value {
+    font-size: 1.2rem;
+  }
+
+  .enroll-right-pane {
+    padding: 24px 16px;
+  }
+
+  .enroll-form-header h2 {
+    font-size: 1.55rem;
+  }
+
   .form-grid-2col {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
-  .enroll-course-title {
-    font-size: 1.85rem;
+
+  .modal-dialog-card {
+    padding: 28px 20px 24px;
+    border-radius: 16px;
+  }
+
+  .modal-title {
+    font-size: 1.35rem;
+  }
+
+  .modal-description {
+    font-size: 0.85rem;
   }
 }
