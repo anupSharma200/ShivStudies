@@ -395,13 +395,7 @@ export default function Login({ onLoginSuccess, onNavigate, defaultGoal = 'upsc-
               type="button"
               className="btn-social-auth"
               onClick={() => {
-                const phone = prompt('Enter your 10-digit mobile number for OTP login:');
-                if (phone && phone.length >= 10) {
-                  const otp = prompt('Enter 4-digit OTP sent to your phone (demo: 1234):');
-                  if (otp) {
-                    handleSocialLogin('Mobile');
-                  }
-                }
+                alert('This feature will be added later.');
               }}
               disabled={isLoading}
             >

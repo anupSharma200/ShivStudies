@@ -12,6 +12,7 @@ import ContactSupport from './pages/ContactSupport';
 import PopularGoals from './pages/PopularGoals';
 import StudyMaterial from './pages/StudyMaterial';
 import LearningPrograms from './pages/LearningPrograms';
+import Courses from './pages/Courses';
 import './css/global.css';
 
 export default function App() {
@@ -57,6 +58,7 @@ export default function App() {
       'goals',
       'study-material',
       'programs',
+      'courses',
     ];
 
     const { route, param } = parseHash();
@@ -204,6 +206,13 @@ export default function App() {
           <LearningPrograms
             onNavigate={handleNavigate}
             initialProgram={navParam}
+            onEnroll={handleEnroll}
+          />
+        )}
+
+        {currentPage === 'courses' && (
+          <Courses
+            onNavigate={handleNavigate}
             onEnroll={handleEnroll}
           />
         )}

@@ -142,6 +142,13 @@ export default function Navbar({
                 </button>
                 <button
                   type="button"
+                  className={`nav-link ${currentPage === 'courses' ? 'active' : ''}`}
+                  onClick={() => onNavigate && onNavigate('courses')}
+                >
+                  Courses
+                </button>
+                <button
+                  type="button"
                   className="nav-link"
                   onClick={() => {
                     if (onNavigate) onNavigate('home');
@@ -369,6 +376,16 @@ export default function Navbar({
                 }}
               >
                 <span>🏠</span> Explore Platform
+              </button>
+              <button
+                type="button"
+                className="mobile-nav-item"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  if (onNavigate) onNavigate('courses');
+                }}
+              >
+                <span>🎥</span> All Courses & Lectures
               </button>
               <button
                 type="button"
