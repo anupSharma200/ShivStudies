@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../css/login.css';
+import backIcon from '../assets/back.png';
 
 export default function Login({ onLoginSuccess, onNavigate, defaultGoal = 'upsc-cse' }) {
   const [authMode, setAuthMode] = useState('login'); // 'login' | 'signup'
@@ -163,18 +164,25 @@ export default function Login({ onLoginSuccess, onNavigate, defaultGoal = 'upsc-
           <div className="auth-header">
             <button
               type="button"
+              className="btn-back-img"
               onClick={() => onNavigate && onNavigate('home')}
+              aria-label="Back"
+              title="Back"
               style={{
-                fontSize: '0.8rem',
-                color: 'var(--text-muted)',
-                marginBottom: '12px',
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+                padding: '0',
+                marginBottom: '14px',
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '6px',
-                fontWeight: 600,
               }}
             >
-              ← Back to Home
+              <img
+                src={backIcon}
+                alt="Back"
+                style={{ width: '28px', height: '28px', objectFit: 'contain' }}
+              />
             </button>
             <h1>{authMode === 'login' ? 'Welcome Back!' : 'Start Learning Free'}</h1>
             <p>
