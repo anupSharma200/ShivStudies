@@ -70,40 +70,55 @@ export default function Footer({ onNavigate }) {
 
           {/* Popular Goals */}
           <div className="footer-column">
-            <h4>Popular Goals</h4>
+            <h4
+              style={{ cursor: 'pointer' }}
+              onClick={() => onNavigate && onNavigate('goals')}
+            >
+              Popular Goals
+            </h4>
             <ul>
-              <li><a href="#upsc">UPSC Civil Services (IAS / IPS)</a></li>
-              <li><a href="#uppsc">UPPSC (Uttar Pradesh PCS)</a></li>
-              <li><a href="#bpsc">BPSC (Bihar PCS)</a></li>
-              <li><a href="#mppsc">MPPSC (Madhya Pradesh PCS)</a></li>
-              <li><a href="#ras">RAS / RPSC (Rajasthan PCS)</a></li>
-              <li><a href="#state-govt">State SI & Police Exams</a></li>
+              <li><a href="#goals-upsc" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('goals', 'upsc-cse'); }}>UPSC Civil Services (IAS / IPS)</a></li>
+              <li><a href="#goals-uppsc" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('goals', 'uppsc'); }}>UPPSC (Uttar Pradesh PCS)</a></li>
+              <li><a href="#goals-bpsc" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('goals', 'bpsc'); }}>BPSC (Bihar PCS)</a></li>
+              <li><a href="#goals-mppsc" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('goals', 'mppsc'); }}>MPPSC (Madhya Pradesh PCS)</a></li>
+              <li><a href="#goals-ras" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('goals', 'ras-rpsc'); }}>RAS / RPSC (Rajasthan PCS)</a></li>
+              <li><a href="#goals-state" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('goals', 'state-govt'); }}>State SI & Police Exams</a></li>
             </ul>
           </div>
 
           {/* Study Material */}
           <div className="footer-column">
-            <h4>Study Material</h4>
+            <h4
+              style={{ cursor: 'pointer' }}
+              onClick={() => onNavigate && onNavigate('study-material')}
+            >
+              Study Material
+            </h4>
             <ul>
-              <li><a href="#pyq">UPSC Previous Year Papers (PYQs)</a></li>
-              <li><a href="#mock">Daily Mains Answer Writing</a></li>
-              <li><a href="#ncert">NCERT GS Crux Notes</a></li>
-              <li><a href="#daily">The Hindu & Express Editorial Gist</a></li>
-              <li><a href="#yojana">Yojana & Kurukshetra Summaries</a></li>
-              <li><a href="#state-gk">State PCS Special GK & Current Affairs</a></li>
+              <li><a href="#mat-pyq" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('study-material', 'pyq'); }}>UPSC Previous Year Papers (PYQs)</a></li>
+              <li><a href="#mat-mains" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('study-material', 'mains'); }}>Daily Mains Answer Writing</a></li>
+              <li><a href="#mat-ncert" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('study-material', 'ncert'); }}>NCERT GS Crux Notes</a></li>
+              <li><a href="#mat-editorial" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('study-material', 'editorial'); }}>The Hindu & Express Editorial Gist</a></li>
+              <li><a href="#mat-yojana" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('study-material', 'yojana'); }}>Yojana & Kurukshetra Summaries</a></li>
+              <li><a href="#mat-state" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('study-material', 'state-gk'); }}>State PCS Special GK & Current Affairs</a></li>
             </ul>
           </div>
 
           {/* Learning Programs */}
           <div className="footer-column">
-            <h4>Learning Programs</h4>
+            <h4
+              style={{ cursor: 'pointer' }}
+              onClick={() => onNavigate && onNavigate('programs')}
+            >
+              Learning Programs
+            </h4>
             <ul>
-              <li><a href="#plus">ShivStudies Plus Subscription</a></li>
-              <li><a href="#iconic">Iconic 1-on-1 Mentorship</a></li>
-              <li><a href="#centers">ShivStudies Offline Centers</a></li>
-              <li><a href="#scholarship">CSST Civil Services Scholarship</a></li>
-              <li><a href="#campus">Campus Ambassador Program</a></li>
-              <li><a href="#educators">Teach at ShivStudies</a></li>
+              <li><a href="#prog-plus" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('programs', 'plus'); }}>ShivStudies Plus Subscription</a></li>
+              <li><a href="#prog-iconic" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('programs', 'iconic'); }}>Iconic 1-on-1 Mentorship</a></li>
+              <li><a href="#prog-centers" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('programs', 'offline'); }}>ShivStudies Offline Centers</a></li>
+              <li><a href="#prog-scholarship" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('programs', 'scholarship'); }}>CSST Civil Services Scholarship</a></li>
+              <li><a href="#prog-campus" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('programs', 'campus'); }}>Campus Ambassador Program</a></li>
+              <li><a href="#prog-teach" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('programs', 'teach'); }}>Teach at ShivStudies</a></li>
             </ul>
           </div>
 
@@ -111,12 +126,11 @@ export default function Footer({ onNavigate }) {
           <div className="footer-column">
             <h4>Help & Support</h4>
             <ul>
-              <li><a href="#about">About ShivStudies</a></li>
-              <li><a href="#contact">Contact Support (24x7)</a></li>
-              <li><a href="#careers">Careers • We're Hiring!</a></li>
-              <li><a href="#faq">Frequently Asked Questions</a></li>
-              <li><a href="#privacy">Privacy Policy</a></li>
-              <li><a href="#terms">Terms & Conditions</a></li>
+              <li><a href="#about" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('about'); }}>About ShivStudies</a></li>
+              <li><a href="#contact" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('contact'); }}>Contact Support (24x7)</a></li>
+              <li><a href="#faq" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('faq'); }}>Frequently Asked Questions</a></li>
+              <li><a href="#privacy" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('privacy'); }}>Privacy Policy</a></li>
+              <li><a href="#terms" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('terms'); }}>Terms & Conditions</a></li>
             </ul>
           </div>
         </div>
@@ -125,10 +139,10 @@ export default function Footer({ onNavigate }) {
         <div className="footer-bottom">
           <div>© {new Date().getFullYear()} ShivStudies Learning Technologies Pvt Ltd. All rights reserved.</div>
           <div className="footer-legal-links">
-            <a href="#privacy">Privacy</a>
-            <a href="#terms">Terms</a>
-            <a href="#sitemap">Sitemap</a>
-            <a href="#security">Security</a>
+            <a href="#privacy" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('privacy'); }}>Privacy</a>
+            <a href="#terms" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('terms'); }}>Terms</a>
+            <a href="#home" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('home'); }}>Home</a>
+            <a href="#contact" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('contact'); }}>Support</a>
           </div>
         </div>
       </div>

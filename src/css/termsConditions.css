@@ -1,0 +1,12 @@
+@import './privacyPolicy.css';
+
+.terms-highlight-box {
+  background-color: #ECFDF5;
+  border-left: 4px solid var(--primary);
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  font-size: 0.925rem;
+  color: #065F46;
+  line-height: 1.6;
+}

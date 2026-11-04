@@ -204,7 +204,7 @@ export default function Navbar({
                         className="user-dropdown-item"
                         onClick={() => {
                           setUserMenuOpen(false);
-                          alert(`Welcome to your learning dashboard for ${currentGoalObj.label}!`);
+                          if (onNavigate) onNavigate('study-material');
                         }}
                       >
                         <span>📖</span> My Learning
@@ -214,7 +214,7 @@ export default function Navbar({
                         className="user-dropdown-item"
                         onClick={() => {
                           setUserMenuOpen(false);
-                          alert('Test Series: 4 mock tests scheduled this week.');
+                          if (onNavigate) onNavigate('study-material', 'pyq');
                         }}
                       >
                         <span>📊</span> Test Series & Analytics
