@@ -6,13 +6,13 @@ export default function EnrollNow({
   user,
   onNavigate,
 }) {
-  // Course details with fallback defaults matching the UI spec
+  // Course details with fallback defaults matching UPSC & State exams
   const currentCourse = course || {
-    title: 'Emerge Excellence Batch: Complete Physics & Math',
-    duration: '12 months',
-    mode: 'Online / Classroom',
-    nextBatch: '10 Nov 2026',
-    price: '₹ 14,999',
+    title: 'Samarthya UPSC CSE 2026/27: Complete GS Foundation (Prelims + Mains)',
+    duration: '18 months',
+    mode: 'Online Live + Mentorship',
+    nextBatch: '15 Nov 2026',
+    price: '₹ 24,999',
   };
 
   // Form states
@@ -226,13 +226,12 @@ export default function EnrollNow({
                   onChange={(e) => setQualification(e.target.value)}
                   required
                 >
-                  <option value="">Select</option>
-                  <option value="Class 10">Class 10</option>
-                  <option value="Class 11">Class 11</option>
-                  <option value="Class 12">Class 12</option>
-                  <option value="12th Passed / Dropper">12th Passed / Dropper</option>
-                  <option value="Undergraduate">Undergraduate / College</option>
-                  <option value="Graduate">Graduate</option>
+                  <option value="">Select qualification</option>
+                  <option value="Undergraduate (1st / 2nd Year)">Undergraduate (1st / 2nd Year)</option>
+                  <option value="Undergraduate (Final Year)">Undergraduate (Final Year)</option>
+                  <option value="Graduate (B.A. / B.Sc. / B.Tech / B.Com etc.)">Graduate (Degree Completed)</option>
+                  <option value="Postgraduate / Masters">Postgraduate / Masters</option>
+                  <option value="Working Professional">Working Professional / Civil Aspirant</option>
                 </select>
               </div>
 

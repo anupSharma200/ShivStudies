@@ -9,7 +9,7 @@ import './css/global.css';
 export default function App() {
   // Default to 'login' page as requested
   const [currentPage, setCurrentPage] = useState('login'); // 'login' | 'home' | 'enroll'
-  const [selectedGoal, setSelectedGoal] = useState('iit-jee');
+  const [selectedGoal, setSelectedGoal] = useState('upsc-cse');
   const [selectedCourse, setSelectedCourse] = useState(null);
   const [user, setUser] = useState(null);
   const [toast, setToast] = useState(null);

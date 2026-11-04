@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../css/login.css';
 
-export default function Login({ onLoginSuccess, onNavigate, defaultGoal = 'iit-jee' }) {
+export default function Login({ onLoginSuccess, onNavigate, defaultGoal = 'upsc-cse' }) {
   const [authMode, setAuthMode] = useState('login'); // 'login' | 'signup'
   const [email, setEmail] = useState('aspirant@shivstudies.com');
   const [password, setPassword] = useState('');
@@ -17,7 +17,7 @@ export default function Login({ onLoginSuccess, onNavigate, defaultGoal = 'iit-j
     setEmail('aspirant@shivstudies.com');
     setPassword('ShivStudies@2026');
     if (authMode === 'signup') {
-      setFullName('Shiv Kumar Sharma');
+      setFullName('Shiva Kumar Sharma');
     }
     setErrorMsg('');
   };
@@ -85,8 +85,8 @@ export default function Login({ onLoginSuccess, onNavigate, defaultGoal = 'iit-j
     setTimeout(() => {
       setIsLoading(false);
       const demoUser = {
-        name: `${provider} Student`,
-        email: `student.${provider.toLowerCase()}@shivstudies.com`,
+        name: `${provider} Aspirant`,
+        email: `aspirant.${provider.toLowerCase()}@shivstudies.com`,
         goal: goal,
         token: 'shiv_social_' + Date.now(),
       };
@@ -113,35 +113,35 @@ export default function Login({ onLoginSuccess, onNavigate, defaultGoal = 'iit-j
                   Shiv<span>Studies</span>
                 </div>
                 <span className="brand-tagline" style={{ color: '#A7F3D0' }}>
-                  Learning App
+                  Civil Services Prep
                 </span>
               </div>
             </div>
 
             <h2>
-              Crack your dream exam with <span>India's Best</span> Educators
+              Crack UPSC & State PCS with <span>India's Best</span> Mentors
             </h2>
             <p>
-              Join over 15,000,000+ registered aspirants preparing for IIT JEE, NEET UG, UPSC, SSC, and Board exams.
+              Join over 350,000+ registered aspirants preparing for UPSC CSE, UPPSC, BPSC, MPPSC and State Government examinations.
             </p>
 
             {/* Feature List */}
             <div className="auth-features-list">
               <div className="auth-feature-item">
                 <div className="auth-feature-icon">✓</div>
-                <span>Daily interactive live classes with instant doubt solving</span>
+                <span>Daily Mains answer writing evaluation with mentor feedback</span>
               </div>
               <div className="auth-feature-item">
                 <div className="auth-feature-icon">✓</div>
-                <span>10,000+ full-length mock tests & All-India rank predictor</span>
+                <span>Full-length Prelims test series with UPSC/PCS negative marking</span>
               </div>
               <div className="auth-feature-item">
                 <div className="auth-feature-icon">✓</div>
-                <span>Comprehensive PDF study notes & revision mind maps</span>
+                <span>Daily The Hindu editorial analysis & monthly Yojana/Kurukshetra gist</span>
               </div>
               <div className="auth-feature-item">
                 <div className="auth-feature-icon">✓</div>
-                <span>1-on-1 personalized academic mentorship & guidance</span>
+                <span>1-on-1 personalized academic mentorship with serving & retired officers</span>
               </div>
             </div>
           </div>
@@ -277,12 +277,12 @@ export default function Login({ onLoginSuccess, onNavigate, defaultGoal = 'iit-j
                     value={goal}
                     onChange={(e) => setGoal(e.target.value)}
                   >
-                    <option value="iit-jee">IIT JEE (Mains & Advanced)</option>
-                    <option value="neet-ug">NEET UG (Medical Entrance)</option>
-                    <option value="upsc-cse">UPSC Civil Services (IAS)</option>
-                    <option value="ssc-bank">SSC & Banking Exams</option>
-                    <option value="cbse-12">CBSE Class 12 Boards</option>
-                    <option value="coding-tech">Coding & Tech Skills</option>
+                    <option value="upsc-cse">UPSC Civil Services (IAS / IPS)</option>
+                    <option value="uppsc">UPPSC (Uttar Pradesh PCS)</option>
+                    <option value="bpsc">BPSC (Bihar Public Service)</option>
+                    <option value="mppsc">MPPSC (Madhya Pradesh PCS)</option>
+                    <option value="ras-rpsc">RAS / RPSC (Rajasthan PCS)</option>
+                    <option value="state-govt">State Government & Police Exams</option>
                   </select>
                 </div>
               </div>

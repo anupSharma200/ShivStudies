@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import '../css/navbar.css';
 
 const EXAM_GOALS = [
-  { id: 'iit-jee', label: 'IIT JEE', icon: '⚛️', sub: 'Mains & Advanced' },
-  { id: 'neet-ug', label: 'NEET UG', icon: '🩺', sub: 'Medical Entrance' },
   { id: 'upsc-cse', label: 'UPSC CSE', icon: '🏛️', sub: 'IAS / IPS / IFS' },
-  { id: 'ssc-bank', label: 'SSC & Banking', icon: '💼', sub: 'CGL, CHSL, IBPS' },
-  { id: 'cbse-12', label: 'CBSE Class 12', icon: '📚', sub: 'Board Exams' },
-  { id: 'coding-tech', label: 'Coding & Tech', icon: '💻', sub: 'Full Stack & AI' },
+  { id: 'uppsc', label: 'UPPSC (PCS)', icon: '📜', sub: 'UP State Civil Services' },
+  { id: 'bpsc', label: 'BPSC (Bihar PCS)', icon: '📖', sub: 'Bihar Public Service' },
+  { id: 'mppsc', label: 'MPPSC (MP PCS)', icon: '🎯', sub: 'Madhya Pradesh PCS' },
+  { id: 'ras-rpsc', label: 'RAS / RPSC', icon: '⚔️', sub: 'Rajasthan Admin Services' },
+  { id: 'state-govt', label: 'State Govt & Police', icon: '👮', sub: 'SI, Patwari & Secretariat' },
 ];
 
 export default function Navbar({
@@ -34,7 +34,7 @@ export default function Navbar({
       {/* Top Announcement Bar */}
       <div className="top-announcement">
         <span className="badge">New</span>
-        <span>🚀 ShivStudies National Scholarship Admission Test (SNSAT) - Win up to 90% Scholarship!</span>
+        <span>🏛️ ShivStudies Civil Services Scholarship Test (CSST) - Up to 90% Scholarship on UPSC & State PCS!</span>
         <button
           className="banner-link"
           onClick={() => {

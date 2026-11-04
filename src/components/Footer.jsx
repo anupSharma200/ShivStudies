@@ -58,8 +58,9 @@ export default function Footer({ onNavigate }) {
               </div>
             </div>
             <p>
-              ShivStudies is India's premier online learning platform empowering millions of students to
-              crack competitive exams with daily live classes, top educators, and personalized test series.
+              ShivStudies is India's premier online learning platform empowering millions of civil services and
+              state exam aspirants to crack UPSC CSE, State PCS, and administrative exams with daily live classes,
+              top educators, and personalized test series.
             </p>
             <div className="footer-socials">
               <a href="#youtube" className="social-pill" aria-label="YouTube">▶</a>
@@ -73,12 +74,12 @@ export default function Footer({ onNavigate }) {
           <div className="footer-column">
             <h4>Popular Goals</h4>
             <ul>
-              <li><a href="#iit">IIT JEE Mains & Advanced</a></li>
-              <li><a href="#neet">NEET UG Medical</a></li>
-              <li><a href="#upsc">UPSC Civil Services (IAS)</a></li>
-              <li><a href="#ssc">SSC CGL & CHSL</a></li>
-              <li><a href="#bank">Bank PO & Clerk (IBPS)</a></li>
-              <li><a href="#cbse">CBSE Class 10 & 12</a></li>
+              <li><a href="#upsc">UPSC Civil Services (IAS / IPS)</a></li>
+              <li><a href="#uppsc">UPPSC (Uttar Pradesh PCS)</a></li>
+              <li><a href="#bpsc">BPSC (Bihar PCS)</a></li>
+              <li><a href="#mppsc">MPPSC (Madhya Pradesh PCS)</a></li>
+              <li><a href="#ras">RAS / RPSC (Rajasthan PCS)</a></li>
+              <li><a href="#state-govt">State SI & Police Exams</a></li>
             </ul>
           </div>
 
@@ -86,12 +87,12 @@ export default function Footer({ onNavigate }) {
           <div className="footer-column">
             <h4>Study Material</h4>
             <ul>
-              <li><a href="#pyq">Previous Year Papers (PYQs)</a></li>
-              <li><a href="#mock">Free All-India Mock Tests</a></li>
-              <li><a href="#ncert">NCERT Solutions & Notes</a></li>
-              <li><a href="#daily">Daily Current Affairs & Hindu Analysis</a></li>
-              <li><a href="#formula">Formula Cheat Sheets</a></li>
-              <li><a href="#exam-dates">Upcoming Exam Dates 2026</a></li>
+              <li><a href="#pyq">UPSC Previous Year Papers (PYQs)</a></li>
+              <li><a href="#mock">Daily Mains Answer Writing</a></li>
+              <li><a href="#ncert">NCERT GS Crux Notes</a></li>
+              <li><a href="#daily">The Hindu & Express Editorial Gist</a></li>
+              <li><a href="#yojana">Yojana & Kurukshetra Summaries</a></li>
+              <li><a href="#state-gk">State PCS Special GK & Current Affairs</a></li>
             </ul>
           </div>
 
@@ -102,7 +103,7 @@ export default function Footer({ onNavigate }) {
               <li><a href="#plus">ShivStudies Plus Subscription</a></li>
               <li><a href="#iconic">Iconic 1-on-1 Mentorship</a></li>
               <li><a href="#centers">ShivStudies Offline Centers</a></li>
-              <li><a href="#scholarship">SNSAT National Scholarship</a></li>
+              <li><a href="#scholarship">CSST Civil Services Scholarship</a></li>
               <li><a href="#campus">Campus Ambassador Program</a></li>
               <li><a href="#educators">Teach at ShivStudies</a></li>
             </ul>
